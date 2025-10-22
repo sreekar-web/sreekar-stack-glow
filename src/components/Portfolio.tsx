@@ -1,9 +1,12 @@
 import { ExternalLink, Calendar } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 
 const Portfolio = () => {
+  const navigate = useNavigate();
+  
   const projects = [
     {
       title: "Bank and Institute App",
@@ -11,6 +14,7 @@ const Portfolio = () => {
       description: "Salesforce-based application managing operations and data for banks and educational institutes using interconnected SQL tables. Emphasized data modeling, integration, and platform customization.",
       tags: ["Salesforce", "SQL", "Data Modeling", "Integration"],
       color: "primary",
+      link: "/case/bank-institute",
     },
     {
       title: "Drones in Agriculture",
@@ -99,7 +103,8 @@ const Portfolio = () => {
                 <Button
                   variant="ghost"
                   className="w-full justify-between group-hover:bg-muted/50"
-                  disabled
+                  disabled={!project.link}
+                  onClick={() => project.link && navigate(project.link)}
                 >
                   View Case Study
                   <ExternalLink className="h-4 w-4" />
