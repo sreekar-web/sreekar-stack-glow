@@ -44,6 +44,7 @@ const Portfolio = () => {
       description: "Backend system in JavaScript with SQL persistence for managing car bookings. Implemented booking flows and data storage with focus on reliability.",
       tags: ["JavaScript", "SQL", "Backend", "REST API"],
       color: "secondary",
+      link: "/case/car-booking",
     },
   ];
 
