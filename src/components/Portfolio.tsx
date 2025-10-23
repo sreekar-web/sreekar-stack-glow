@@ -22,6 +22,7 @@ const Portfolio = () => {
       description: "Led backend programming and flight control implementation with JavaScript dashboard for real-time telemetry. Trained a basic ML model for decision-making in agricultural drone operations.",
       tags: ["JavaScript", "IoT", "ML", "Backend"],
       color: "secondary",
+      link: "/case/drones-agriculture",
     },
     {
       title: "Student Database System",
