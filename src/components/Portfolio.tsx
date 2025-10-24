@@ -30,6 +30,7 @@ const Portfolio = () => {
       description: "Web application in Python to manage student academic data with dashboard UI and SQL database integration. Streamlined data management for educational institutions.",
       tags: ["Python", "SQL", "Web App", "Dashboard"],
       color: "accent",
+      link: "/case/student-database",
     },
     {
       title: "Progressive Web Chat App",
