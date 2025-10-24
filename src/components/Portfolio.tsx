@@ -36,7 +36,8 @@ const Portfolio = () => {
       timeframe: "Feb 2021 – May 2021",
       description: "Secure chat application with encryption, WhatsApp-style interface, and PWA principles for cross-platform usability. Built with Python focusing on security and user experience.",
       tags: ["Python", "PWA", "Security", "Chat"],
-      color: "primary",
+      color: "accent",
+      link: "/case/chat-app",
     },
     {
       title: "Online Car Booking System",
