@@ -159,16 +159,54 @@ const DronesAgricultureCase = () => {
                   </p>
                 </div>
 
-                <div className="bg-background/60 p-6 rounded-lg border border-border font-mono text-sm overflow-x-auto">
-                  <pre className="text-muted-foreground">
-{`[Drones] → [MQTT Broker/WebSocket] → [Backend (Python API)]
-                                           ↓
-                                    [PostgreSQL DB]
-                                           ↓
-                                    [React Dashboard]
-                                           ↓
-                               [Machine Learning Module]`}
-                  </pre>
+                <div className="bg-background/60 p-6 rounded-lg border border-border">
+                  <div className="space-y-6">
+                    <div className="text-center">
+                      <div className="inline-flex items-center gap-3 px-6 py-3 bg-primary/20 border-2 border-primary rounded-lg font-semibold mb-4">
+                        <Plane className="h-5 w-5" />
+                        Autonomous Drones
+                      </div>
+                    </div>
+                    <div className="text-center text-muted-foreground">↓ MQTT / WebSocket ↓</div>
+                    <div className="grid md:grid-cols-3 gap-4">
+                      <div className="text-center">
+                        <div className="px-4 py-3 bg-secondary/20 border border-secondary rounded-lg font-medium text-sm">
+                          MQTT Broker
+                          <div className="text-xs text-muted-foreground mt-1">Low-latency messaging</div>
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <div className="px-4 py-3 bg-secondary/20 border border-secondary rounded-lg font-medium text-sm">
+                          Python API
+                          <div className="text-xs text-muted-foreground mt-1">Flask/FastAPI</div>
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <div className="px-4 py-3 bg-secondary/20 border border-secondary rounded-lg font-medium text-sm">
+                          WebSocket Server
+                          <div className="text-xs text-muted-foreground mt-1">Real-time push</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-center text-muted-foreground">↓</div>
+                    <div className="flex justify-center gap-6 flex-wrap">
+                      <div className="px-4 py-2 bg-accent/20 border border-accent rounded text-sm">
+                        PostgreSQL
+                      </div>
+                      <div className="px-4 py-2 bg-accent/20 border border-accent rounded text-sm">
+                        TensorFlow ML
+                      </div>
+                      <div className="px-4 py-2 bg-accent/20 border border-accent rounded text-sm">
+                        Image Storage (S3)
+                      </div>
+                    </div>
+                    <div className="text-center text-muted-foreground">↓ REST API / WebSocket ↓</div>
+                    <div className="text-center">
+                      <div className="inline-flex items-center gap-3 px-6 py-3 bg-primary/20 border border-primary rounded-lg font-medium">
+                        React Dashboard + Leaflet.js Maps + Chart.js
+                      </div>
+                    </div>
+                  </div>
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-6">
@@ -250,13 +288,46 @@ const DronesAgricultureCase = () => {
                 </div>
 
                 <div className="bg-muted/30 p-4 rounded-lg">
-                  <h4 className="font-semibold mb-3">Key Relationships</h4>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li>• Drones → Sensors (1:M) – Each drone has multiple sensors</li>
-                    <li>• Sensors → Sensor_Data (1:M) – Time-series data per sensor</li>
-                    <li>• Drones → Flights (1:M) – Flight history tracking</li>
-                    <li>• Flights → Images (1:M) – Captured imagery per flight</li>
-                  </ul>
+                  <h4 className="font-semibold mb-3">Key Relationships & Data Flow</h4>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <div className="font-medium mb-3 text-primary">Primary Relationships</div>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary mt-1">→</span>
+                          <span>Drones <strong>1:M</strong> Sensors (each drone has multiple sensors)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary mt-1">→</span>
+                          <span>Sensors <strong>1:M</strong> Sensor_Data (time-series readings)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary mt-1">→</span>
+                          <span>Drones <strong>1:M</strong> Flights (flight history)</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="bg-background/50 p-4 rounded-lg">
+                      <div className="font-medium mb-3 text-secondary">Image & Analysis</div>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <span className="text-secondary mt-1">→</span>
+                          <span>Flights <strong>1:M</strong> Images (captured imagery per flight)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-secondary mt-1">→</span>
+                          <span>Images contain ML analysis results (crop health, diseases)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-secondary mt-1">→</span>
+                          <span>Indexed by timestamp for efficient time-series queries</span>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="mt-4 p-3 bg-accent/10 border border-accent/30 rounded text-sm text-muted-foreground">
+                    <strong className="text-foreground">Optimization:</strong> Time-series data partitioned by date with automatic retention policies. Sensor_Data uses BRIN indexes for timestamp-based queries achieving &lt;100ms query times on millions of records.
+                  </div>
                 </div>
               </div>
             </Card>

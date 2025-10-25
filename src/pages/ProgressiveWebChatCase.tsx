@@ -232,21 +232,40 @@ const ProgressiveWebChatCase = () => {
 
                 <div className="pt-6 border-t border-border">
                   <h4 className="font-semibold mb-3">Architecture Flow</h4>
-                  <div className="bg-muted/50 p-4 rounded-lg font-mono text-sm overflow-x-auto">
-                    <pre className="text-muted-foreground">
-{`[Browser PWA / Mobile PWA]
-  - Service Worker
-  - WebSocket Client
-  - IndexedDB (cache & queue)
-     |
-  <-> [WebSocket Server] <-> [Backend API]
-           |                      |
-           |                      +-> [DB: Users, Conversations]
-           |                      +-> [S3: Encrypted files]
-           |                      +-> [Redis: Presence, queues]
-           |
-           +-> [Push Service] -> Browser/Mobile Push`}
-                    </pre>
+                  <div className="space-y-6">
+                    <div className="bg-muted/50 p-6 rounded-lg border border-border">
+                      <div className="grid md:grid-cols-3 gap-6">
+                        <div className="space-y-3">
+                          <div className="font-semibold text-primary">PWA Client Layer</div>
+                          <div className="space-y-2">
+                            <div className="p-2 bg-primary/10 rounded text-sm">Service Worker (offline caching)</div>
+                            <div className="p-2 bg-primary/10 rounded text-sm">WebSocket Client (real-time)</div>
+                            <div className="p-2 bg-primary/10 rounded text-sm">IndexedDB (local storage)</div>
+                            <div className="p-2 bg-primary/10 rounded text-sm">React UI</div>
+                          </div>
+                        </div>
+                        <div className="space-y-3">
+                          <div className="font-semibold text-secondary">Backend Services</div>
+                          <div className="space-y-2">
+                            <div className="p-2 bg-secondary/10 rounded text-sm">WebSocket Server</div>
+                            <div className="p-2 bg-secondary/10 rounded text-sm">REST API</div>
+                            <div className="p-2 bg-secondary/10 rounded text-sm">Auth Service</div>
+                            <div className="p-2 bg-secondary/10 rounded text-sm">VAPID Push Service</div>
+                          </div>
+                        </div>
+                        <div className="space-y-3">
+                          <div className="font-semibold text-accent">Storage & Data</div>
+                          <div className="space-y-2">
+                            <div className="p-2 bg-accent/10 rounded text-sm">PostgreSQL (metadata)</div>
+                            <div className="p-2 bg-accent/10 rounded text-sm">Redis (presence/queues)</div>
+                            <div className="p-2 bg-accent/10 rounded text-sm">S3 (encrypted files)</div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="text-center text-sm text-muted-foreground">
+                      Real-time messaging via WebSocket • REST API for history & management • End-to-end encryption throughout
+                    </div>
                   </div>
                 </div>
               </div>
@@ -314,13 +333,53 @@ const ProgressiveWebChatCase = () => {
 
                 <div className="pt-6 border-t border-border">
                   <h4 className="font-semibold mb-3">Key Relationships</h4>
-                  <ul className="space-y-2 text-muted-foreground">
-                    <li>• Users → Devices (1:M) - Multi-device support</li>
-                    <li>• Conversations → Participants (M:N) - Group membership</li>
-                    <li>• Conversations → Messages (1:M) - Message history</li>
-                    <li>• Messages → Attachments (1:M) - File handling</li>
-                    <li>• Messages → Acknowledgements (1:M) - Read receipts</li>
-                  </ul>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <div className="font-medium mb-3 text-primary">User & Device Management</div>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary mt-1">→</span>
+                          <span>Users <strong>1:M</strong> Devices (multi-device support)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-primary mt-1">→</span>
+                          <span>Users <strong>1:M</strong> Messages (authorship)</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <div className="font-medium mb-3 text-secondary">Conversation Structure</div>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <span className="text-secondary mt-1">→</span>
+                          <span>Conversations <strong>M:N</strong> Users (group membership via Participants)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-secondary mt-1">→</span>
+                          <span>Conversations <strong>1:M</strong> Messages (history)</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <div className="font-medium mb-3 text-accent">Message Features</div>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <span className="text-accent mt-1">→</span>
+                          <span>Messages <strong>1:M</strong> Attachments (file handling)</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <span className="text-accent mt-1">→</span>
+                          <span>Messages <strong>1:M</strong> Acknowledgements (read receipts)</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="bg-muted/50 p-4 rounded-lg">
+                      <div className="font-medium mb-3">Data Flow</div>
+                      <p className="text-sm text-muted-foreground">
+                        All message payloads stored as <strong>encrypted ciphertext</strong> on server. Only clients with proper keys can decrypt content, ensuring true end-to-end encryption.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Card>

@@ -193,19 +193,101 @@ const OnlineCarBookingCase = () => {
                 <CardTitle>Architecture Flow</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="bg-muted/50 p-6 rounded-lg font-mono text-sm overflow-x-auto">
-                  <pre className="text-muted-foreground">
-{`[User Browser/Mobile]
-        ↓ HTTPS
-[API Gateway / Backend]
-        ↓
-    ┌───┴───┬────────┬──────────┐
-    ↓       ↓        ↓          ↓
-[Postgres] [Stripe] [S3/CDN] [Message Broker]
-                                ↓
-                          [Worker Services]
-                           (Notifications)`}
-                  </pre>
+                <div className="bg-muted/50 p-6 rounded-lg">
+                  <div className="space-y-6">
+                    <div className="flex items-center justify-center gap-4 flex-wrap">
+                      <div className="px-4 py-2 bg-primary/20 border-2 border-primary rounded-lg font-semibold">
+                        User Browser/Mobile
+                      </div>
+                    </div>
+                    <div className="text-center text-muted-foreground">↓ HTTPS ↓</div>
+                    <div className="flex items-center justify-center gap-4 flex-wrap">
+                      <div className="px-4 py-2 bg-secondary/20 border-2 border-secondary rounded-lg font-semibold">
+                        API Gateway / Backend
+                      </div>
+                    </div>
+                    <div className="grid md:grid-cols-4 gap-4">
+                      <div className="text-center">
+                        <div className="text-muted-foreground mb-2">↓</div>
+                        <div className="px-3 py-2 bg-accent/20 border border-accent rounded text-sm font-medium">
+                          PostgreSQL
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-muted-foreground mb-2">↓</div>
+                        <div className="px-3 py-2 bg-green-500/20 border border-green-500 rounded text-sm font-medium">
+                          Stripe Payment
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-muted-foreground mb-2">↓</div>
+                        <div className="px-3 py-2 bg-orange-500/20 border border-orange-500 rounded text-sm font-medium">
+                          S3 / CDN
+                        </div>
+                      </div>
+                      <div className="text-center">
+                        <div className="text-muted-foreground mb-2">↓</div>
+                        <div className="px-3 py-2 bg-purple-500/20 border border-purple-500 rounded text-sm font-medium">
+                          Message Broker
+                        </div>
+                      </div>
+                    </div>
+                    <div className="flex justify-end">
+                      <div className="text-center">
+                        <div className="text-muted-foreground mb-2">↓</div>
+                        <div className="px-3 py-2 bg-primary/20 border border-primary rounded text-sm">
+                          Worker Services
+                          <div className="text-xs text-muted-foreground mt-1">(Notifications, Processing)</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            
+            <Card className="mt-8">
+              <CardHeader>
+                <CardTitle>Booking Process Flow</CardTitle>
+                <CardDescription>End-to-end booking sequence with payment integration</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-4">
+                  <div className="grid md:grid-cols-3 gap-4">
+                    <div className="bg-muted/50 p-4 rounded-lg border-l-4 border-primary">
+                      <div className="font-semibold mb-2">1. Search & Browse</div>
+                      <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• User searches vehicles</li>
+                        <li>• API queries available vehicles</li>
+                        <li>• Results displayed with filters</li>
+                      </ul>
+                    </div>
+                    <div className="bg-muted/50 p-4 rounded-lg border-l-4 border-secondary">
+                      <div className="font-semibold mb-2">2. Check Availability</div>
+                      <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• User selects dates/vehicle</li>
+                        <li>• API checks availability</li>
+                        <li>• PENDING booking created</li>
+                      </ul>
+                    </div>
+                    <div className="bg-muted/50 p-4 rounded-lg border-l-4 border-accent">
+                      <div className="font-semibold mb-2">3. Payment Processing</div>
+                      <ul className="text-sm text-muted-foreground space-y-1">
+                        <li>• Stripe payment intent created</li>
+                        <li>• User confirms payment</li>
+                        <li>• Webhook confirms success</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div className="bg-primary/10 p-4 rounded-lg border border-primary">
+                    <div className="font-semibold mb-2">4. Confirmation & Notification</div>
+                    <ul className="text-sm text-muted-foreground space-y-1">
+                      <li>• Booking status updated to CONFIRMED</li>
+                      <li>• Notification job queued in message broker</li>
+                      <li>• Email/SMS confirmation sent to user</li>
+                      <li>• Booking details available in user dashboard</li>
+                    </ul>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -295,13 +377,42 @@ const OnlineCarBookingCase = () => {
 
                   <div className="border-t pt-4">
                     <h4 className="font-semibold mb-2">Key Relationships</h4>
-                    <ul className="text-sm text-muted-foreground space-y-1">
-                      <li>• users 1:N bookings</li>
-                      <li>• vehicles 1:N bookings</li>
-                      <li>• bookings 1:1 payments</li>
-                      <li>• vehicles 1:N availability entries</li>
-                      <li>• locations 1:N vehicles</li>
-                    </ul>
+                    <div className="grid md:grid-cols-2 gap-4 mt-4">
+                      <div className="bg-muted/50 p-4 rounded-lg">
+                        <div className="font-medium mb-3 text-primary">Primary Relationships</div>
+                        <ul className="text-sm text-muted-foreground space-y-2">
+                          <li className="flex items-center gap-2">
+                            <span className="text-primary">→</span>
+                            <span>users <strong>1:N</strong> bookings</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <span className="text-primary">→</span>
+                            <span>vehicles <strong>1:N</strong> bookings</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <span className="text-primary">→</span>
+                            <span>bookings <strong>1:1</strong> payments</span>
+                          </li>
+                        </ul>
+                      </div>
+                      <div className="bg-muted/50 p-4 rounded-lg">
+                        <div className="font-medium mb-3 text-secondary">Supporting Relationships</div>
+                        <ul className="text-sm text-muted-foreground space-y-2">
+                          <li className="flex items-center gap-2">
+                            <span className="text-secondary">→</span>
+                            <span>vehicles <strong>1:N</strong> availability</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <span className="text-secondary">→</span>
+                            <span>locations <strong>1:N</strong> vehicles</span>
+                          </li>
+                          <li className="flex items-center gap-2">
+                            <span className="text-secondary">→</span>
+                            <span>bookings <strong>1:N</strong> reviews</span>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CardContent>

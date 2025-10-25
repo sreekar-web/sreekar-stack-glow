@@ -195,36 +195,40 @@ const BankInstituteCase = () => {
                   Architecture Overview
                 </CardTitle>
               </CardHeader>
-              <CardContent className="space-y-6">
-                <div className="bg-muted/50 p-6 rounded-lg border border-border/50">
-                  <pre className="text-sm overflow-x-auto">
-{`[Frontend React App]
-        |
-        | REST API
-        ↓
-[Backend Node.js/Salesforce]
-        |
-        | SQL Queries
-        ↓
-   [Database]
-        |
-        ↓
-  [Reporting Module]`}
-                  </pre>
-                </div>
-                
-                <div className="grid md:grid-cols-3 gap-4">
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-sm">Frontend</h4>
-                    <p className="text-sm text-muted-foreground">React.js dashboards and forms for user interaction</p>
-                  </div>
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-sm">Backend</h4>
-                    <p className="text-sm text-muted-foreground">Salesforce + Node.js for API handling and business logic</p>
-                  </div>
-                  <div className="space-y-2">
-                    <h4 className="font-semibold text-sm">Database</h4>
-                    <p className="text-sm text-muted-foreground">MySQL/PostgreSQL for structured data storage</p>
+              <CardContent>
+                <div className="space-y-6">
+                  <div className="bg-muted/50 p-6 rounded-lg border border-border/50">
+                    <div className="space-y-6">
+                      <div className="grid md:grid-cols-3 gap-6">
+                        <div className="space-y-3">
+                          <div className="font-semibold text-primary">Presentation Layer</div>
+                          <div className="space-y-2">
+                            <div className="p-2 bg-primary/10 rounded text-sm">React.js Dashboards</div>
+                            <div className="p-2 bg-primary/10 rounded text-sm">Form Interfaces</div>
+                            <div className="p-2 bg-primary/10 rounded text-sm">Responsive UI</div>
+                          </div>
+                        </div>
+                        <div className="space-y-3">
+                          <div className="font-semibold text-secondary">Application Layer</div>
+                          <div className="space-y-2">
+                            <div className="p-2 bg-secondary/10 rounded text-sm">Salesforce Platform</div>
+                            <div className="p-2 bg-secondary/10 rounded text-sm">Node.js API</div>
+                            <div className="p-2 bg-secondary/10 rounded text-sm">Business Logic</div>
+                          </div>
+                        </div>
+                        <div className="space-y-3">
+                          <div className="font-semibold text-accent">Data Layer</div>
+                          <div className="space-y-2">
+                            <div className="p-2 bg-accent/10 rounded text-sm">MySQL/PostgreSQL</div>
+                            <div className="p-2 bg-accent/10 rounded text-sm">Reporting Module</div>
+                            <div className="p-2 bg-accent/10 rounded text-sm">Data Analytics</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="text-center text-sm text-muted-foreground pt-4 border-t border-border">
+                        Frontend → REST API → Salesforce/Node.js → SQL Database → Reporting
+                      </div>
+                    </div>
                   </div>
                 </div>
               </CardContent>
@@ -323,26 +327,36 @@ const BankInstituteCase = () => {
 
                   <div className="pt-4 border-t border-border/50">
                     <h4 className="font-semibold mb-3">Key Relationships</h4>
-                    <div className="space-y-2 text-sm text-muted-foreground">
-                      <div className="flex gap-2">
-                        <span className="text-primary">→</span>
-                        <span>Users → Accounts (1:M)</span>
+                    <div className="grid md:grid-cols-2 gap-4">
+                      <div className="bg-muted/50 p-4 rounded-lg border-l-4 border-primary">
+                        <div className="font-medium mb-3 text-primary">Banking Module</div>
+                        <div className="space-y-2 text-sm text-muted-foreground">
+                          <div className="flex gap-2">
+                            <span className="text-primary">→</span>
+                            <span>Users → Accounts <strong>(1:M)</strong></span>
+                          </div>
+                          <div className="flex gap-2">
+                            <span className="text-primary">→</span>
+                            <span>Banks → Accounts <strong>(1:M)</strong></span>
+                          </div>
+                          <div className="flex gap-2">
+                            <span className="text-secondary">→</span>
+                            <span>Accounts → Transactions <strong>(1:M)</strong></span>
+                          </div>
+                        </div>
                       </div>
-                      <div className="flex gap-2">
-                        <span className="text-primary">→</span>
-                        <span>Banks → Accounts (1:M)</span>
-                      </div>
-                      <div className="flex gap-2">
-                        <span className="text-secondary">→</span>
-                        <span>Accounts → Transactions (1:M)</span>
-                      </div>
-                      <div className="flex gap-2">
-                        <span className="text-accent">→</span>
-                        <span>Institutes → Courses (1:M)</span>
-                      </div>
-                      <div className="flex gap-2">
-                        <span className="text-accent">→</span>
-                        <span>Users (Students) ↔ Courses (M:N via Enrollments)</span>
+                      <div className="bg-muted/50 p-4 rounded-lg border-l-4 border-accent">
+                        <div className="font-medium mb-3 text-accent">Institute Module</div>
+                        <div className="space-y-2 text-sm text-muted-foreground">
+                          <div className="flex gap-2">
+                            <span className="text-accent">→</span>
+                            <span>Institutes → Courses <strong>(1:M)</strong></span>
+                          </div>
+                          <div className="flex gap-2">
+                            <span className="text-accent">→</span>
+                            <span>Users (Students) ↔ Courses <strong>(M:N via Enrollments)</strong></span>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>

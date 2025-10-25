@@ -156,46 +156,115 @@ const StudentDatabaseCase = () => {
               
               <Card className="p-6 mb-8 bg-card/50 backdrop-blur-sm">
                 <h3 className="text-xl font-semibold mb-4">Architecture Components</h3>
-                <div className="space-y-4 text-muted-foreground">
-                  <div>
-                    <span className="font-medium text-foreground">Frontend Layer:</span> React SPA with TypeScript for admin, faculty, and student portals with real-time data fetching using react-query.
+                <div className="space-y-6">
+                  <div className="grid md:grid-cols-3 gap-6 bg-muted/50 p-6 rounded-lg border border-border">
+                    <div className="space-y-3">
+                      <div className="font-semibold text-primary">Frontend Layer</div>
+                      <div className="space-y-2">
+                        <div className="p-2 bg-primary/10 rounded text-sm">React SPA + TypeScript</div>
+                        <div className="p-2 bg-primary/10 rounded text-sm">React Query (data fetching)</div>
+                        <div className="p-2 bg-primary/10 rounded text-sm">Tailwind CSS</div>
+                        <div className="p-2 bg-primary/10 rounded text-sm">Admin/Faculty/Student portals</div>
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="font-semibold text-secondary">Backend Services</div>
+                      <div className="space-y-2">
+                        <div className="p-2 bg-secondary/10 rounded text-sm">Python FastAPI</div>
+                        <div className="p-2 bg-secondary/10 rounded text-sm">JWT Auth + RBAC</div>
+                        <div className="p-2 bg-secondary/10 rounded text-sm">RESTful APIs</div>
+                        <div className="p-2 bg-secondary/10 rounded text-sm">Async request handling</div>
+                      </div>
+                    </div>
+                    <div className="space-y-3">
+                      <div className="font-semibold text-accent">Data & Jobs</div>
+                      <div className="space-y-2">
+                        <div className="p-2 bg-accent/10 rounded text-sm">PostgreSQL (primary)</div>
+                        <div className="p-2 bg-accent/10 rounded text-sm">Redis + Celery (jobs)</div>
+                        <div className="p-2 bg-accent/10 rounded text-sm">AWS S3 (files)</div>
+                        <div className="p-2 bg-accent/10 rounded text-sm">SendGrid (emails)</div>
+                      </div>
+                    </div>
                   </div>
-                  <div>
-                    <span className="font-medium text-foreground">Backend API:</span> Python FastAPI with async support for RESTful endpoints with comprehensive RBAC middleware.
-                  </div>
-                  <div>
-                    <span className="font-medium text-foreground">Database:</span> PostgreSQL for structured relational academic data with JSONB for flexible metadata fields.
-                  </div>
-                  <div>
-                    <span className="font-medium text-foreground">Storage Layer:</span> AWS S3 for documents, photos, and generated transcripts with presigned URL security.
-                  </div>
-                  <div>
-                    <span className="font-medium text-foreground">Background Jobs:</span> Redis + Celery for async transcript generation, report processing, and bulk operations.
-                  </div>
-                  <div>
-                    <span className="font-medium text-foreground">Authentication:</span> JWT-based auth with refresh tokens and optional SSO integration for institutional access.
+                  <div className="text-center text-sm text-muted-foreground">
+                    JWT Authentication → RBAC Middleware → API Endpoints → PostgreSQL/S3 → Background Workers (Celery)
                   </div>
                 </div>
               </Card>
 
               <Card className="p-6 bg-card/50 backdrop-blur-sm">
                 <h3 className="text-xl font-semibold mb-4">Database Design Highlights</h3>
-                <div className="space-y-3 text-muted-foreground">
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span><span className="font-medium text-foreground">Core Entities:</span> Students, Courses, Sections, Enrollments, Assignments, Grades, Attendance, Transcripts</span>
+                <div className="space-y-6">
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="bg-muted/50 p-4 rounded-lg border-l-4 border-primary">
+                      <div className="font-semibold mb-3 text-primary">Core Entities</div>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span><strong>Students:</strong> Personal info, admission data, guardian details</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span><strong>Courses & Sections:</strong> Curriculum, schedules, capacity management</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                          <span><strong>Enrollments:</strong> Student-section mappings with status tracking</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div className="bg-muted/50 p-4 rounded-lg border-l-4 border-secondary">
+                      <div className="font-semibold mb-3 text-secondary">Academic Tracking</div>
+                      <ul className="space-y-2 text-sm text-muted-foreground">
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="h-4 w-4 text-secondary mt-0.5 flex-shrink-0" />
+                          <span><strong>Assignments & Grades:</strong> Weighted calculations, GPA computation</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="h-4 w-4 text-secondary mt-0.5 flex-shrink-0" />
+                          <span><strong>Attendance:</strong> Session-based tracking with eligibility rules</span>
+                        </li>
+                        <li className="flex items-start gap-2">
+                          <CheckCircle className="h-4 w-4 text-secondary mt-0.5 flex-shrink-0" />
+                          <span><strong>Transcripts:</strong> Generated records with PDF URLs</span>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span><span className="font-medium text-foreground">Relationships:</span> Proper foreign key constraints with cascade rules for data integrity</span>
+                  <div className="bg-accent/10 p-4 rounded-lg border border-accent">
+                    <div className="font-semibold mb-3 text-accent">Key Relationships</div>
+                    <div className="grid md:grid-cols-2 gap-3 text-sm text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <span className="text-accent">→</span>
+                        <span>Students <strong>1:M</strong> Enrollments</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-accent">→</span>
+                        <span>Courses <strong>1:M</strong> Sections</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-accent">→</span>
+                        <span>Sections <strong>1:M</strong> Assignments</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-accent">→</span>
+                        <span>Assignments <strong>1:M</strong> Grades</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-accent">→</span>
+                        <span>Sections <strong>1:M</strong> Attendance</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <span className="text-accent">→</span>
+                        <span>Users (Faculty) <strong>1:M</strong> Sections</span>
+                      </div>
+                    </div>
                   </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span><span className="font-medium text-foreground">Indexing:</span> Optimized queries for student search, enrollment lookups, and grade retrieval</span>
-                  </div>
-                  <div className="flex items-start gap-2">
-                    <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-                    <span><span className="font-medium text-foreground">Audit Trail:</span> Immutable audit logs for compliance and security tracking</span>
+                  <div className="flex items-start gap-2 p-3 bg-muted/30 rounded">
+                    <Database className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
+                    <p className="text-sm text-muted-foreground">
+                      <strong className="text-foreground">Indexing Strategy:</strong> Optimized with composite indexes on (student_id, semester), (section_id, student_id) for fast enrollment and grade lookups. Full-text search on student names and emails.
+                    </p>
                   </div>
                 </div>
               </Card>
