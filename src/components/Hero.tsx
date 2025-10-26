@@ -22,8 +22,9 @@ const Hero = () => {
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_at_center,black,transparent_80%)]" />
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        <div className="flex items-center justify-center">
-          <div className="space-y-8 animate-fade-in max-w-3xl">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="space-y-8 animate-fade-in-left">
             <div className="space-y-4">
               <Badge variant="secondary" className="mb-4 gap-2 py-1.5 px-3">
                 <span className="relative flex h-2 w-2">
@@ -106,6 +107,22 @@ const Hero = () => {
                 <p className="text-sm text-muted-foreground">
                   <span className="text-primary font-semibold">Actively seeking opportunities</span> • Available from May 2025
                 </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column - Profile Image Placeholder */}
+          <div className="flex justify-center lg:justify-end animate-fade-in-right">
+            <div className="relative">
+              {/* Glow Effect */}
+              <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent rounded-full blur-3xl opacity-30 animate-glow-pulse" />
+              
+              {/* Profile Image Placeholder */}
+              <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full border-4 border-primary/30 bg-gradient-to-br from-primary/20 via-card to-secondary/20 backdrop-blur-sm flex items-center justify-center overflow-hidden animate-float">
+                <div className="text-center p-8">
+                  <p className="text-muted-foreground text-sm mb-2">Profile Photo</p>
+                  <p className="text-xs text-muted-foreground/70">Add your professional headshot here</p>
+                </div>
               </div>
             </div>
           </div>
