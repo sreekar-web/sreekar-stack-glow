@@ -105,7 +105,7 @@ const Hero = () => {
             <div className="inline-block">
               <div className="bg-card/50 backdrop-blur-sm border border-primary/20 rounded-lg px-4 py-3">
                 <p className="text-sm text-muted-foreground">
-                  <span className="text-primary font-semibold">Actively seeking opportunities</span> • Available from May 2025
+                  <span className="text-primary font-semibold">Actively seeking opportunities</span>
                 </p>
               </div>
             </div>
