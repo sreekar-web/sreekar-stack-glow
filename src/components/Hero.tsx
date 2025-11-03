@@ -94,7 +94,7 @@ const Hero = () => {
                 className="text-muted-foreground hover:text-foreground"
                 asChild
               >
-                <a href="#" download>
+                <a href="/Sreekar_Rachakonda_Resume.pdf" download>
                   <Download className="mr-2 h-4 w-4" />
                   Resume
                 </a>
