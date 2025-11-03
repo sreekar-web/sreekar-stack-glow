@@ -1,4 +1,4 @@
-import { Linkedin, Github, Mail } from "lucide-react";
+import { Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -30,11 +30,6 @@ const Footer = () => {
       icon: Mail,
       href: "mailto:rachakondasreekar9@gmail.com",
       label: "Email",
-    },
-    {
-      icon: Github,
-      href: "#",
-      label: "GitHub",
     },
   ];
 
