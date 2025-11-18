@@ -100,6 +100,7 @@ const Skills = () => {
                   href="/certificates/AWS_Certified_Developer_Associate_certificate.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  download="AWS_Certified_Developer_Associate_certificate.pdf"
                   className="shrink-0 group cursor-pointer"
                 >
                   <img 
@@ -127,6 +128,7 @@ const Skills = () => {
                   href="/certificates/AWS_Certified_Cloud_Practitioner_certificate.pdf" 
                   target="_blank" 
                   rel="noopener noreferrer"
+                  download="AWS_Certified_Cloud_Practitioner_certificate.pdf"
                   className="shrink-0 group cursor-pointer"
                 >
                   <img 
