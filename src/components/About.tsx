@@ -38,7 +38,7 @@ const About = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-lg mb-2">Certification</h3>
-                  <p className="text-foreground mb-1">AWS Cloud Practitioner</p>
+                  <p className="text-foreground mb-1">AWS Developer Associate</p>
                   <p className="text-sm text-muted-foreground mb-2">Amazon Web Services</p>
                   <Badge variant="outline" className="text-xs border-secondary/50">Certified</Badge>
                 </div>
@@ -56,7 +56,7 @@ const About = () => {
               </p>
               
               <p className="text-muted-foreground leading-relaxed">
-                With a Master's degree in Computer Science from the University of Alabama at Birmingham and AWS Cloud Practitioner certification, I combine academic rigor with practical cloud expertise. My hands-on experience spans full-stack development, database design, and cloud-ready deployments.
+                With a Master's degree in Computer Science from the University of Alabama at Birmingham and AWS Developer Associate certification, I combine academic rigor with practical cloud expertise. My hands-on experience spans full-stack development, database design, and cloud-ready deployments.
               </p>
               
               <p className="text-muted-foreground leading-relaxed">
