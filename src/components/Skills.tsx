@@ -92,9 +92,36 @@ const Skills = () => {
             ))}
           </div>
 
-          {/* AWS Badge Highlight */}
-          <div className="mt-12 flex justify-center animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          {/* AWS Certifications */}
+          <div className="mt-12 space-y-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
             <Card className="p-6 bg-gradient-to-r from-secondary/10 to-primary/10 border-secondary/30 hover:border-secondary/50 transition-all">
+              <div className="flex items-center gap-6">
+                <a 
+                  href="/certificates/AWS_Certified_Developer_Associate_certificate.pdf" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="shrink-0 group cursor-pointer"
+                >
+                  <img 
+                    src={awsCertificate} 
+                    alt="AWS Developer Associate Certificate" 
+                    className="h-24 w-auto rounded-lg border-2 border-secondary/30 group-hover:border-secondary transition-all group-hover:scale-105 shadow-lg"
+                  />
+                </a>
+                <div className="flex items-center gap-4">
+                  <div className="p-3 rounded-lg bg-secondary/20">
+                    <Cloud className="h-8 w-8 text-secondary" />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-lg">AWS Developer Associate Certified</p>
+                    <p className="text-sm text-muted-foreground">Application development, deployment, and debugging on AWS</p>
+                    <p className="text-xs text-muted-foreground/70 mt-1">Click certificate to view full credentials</p>
+                  </div>
+                </div>
+              </div>
+            </Card>
+            
+            <Card className="p-6 bg-gradient-to-r from-accent/10 to-primary/10 border-accent/30 hover:border-accent/50 transition-all">
               <div className="flex items-center gap-6">
                 <a 
                   href="/certificates/AWS_Certified_Cloud_Practitioner_certificate.pdf" 
@@ -105,12 +132,12 @@ const Skills = () => {
                   <img 
                     src={awsCertificate} 
                     alt="AWS Cloud Practitioner Certificate" 
-                    className="h-24 w-auto rounded-lg border-2 border-secondary/30 group-hover:border-secondary transition-all group-hover:scale-105 shadow-lg"
+                    className="h-24 w-auto rounded-lg border-2 border-accent/30 group-hover:border-accent transition-all group-hover:scale-105 shadow-lg"
                   />
                 </a>
                 <div className="flex items-center gap-4">
-                  <div className="p-3 rounded-lg bg-secondary/20">
-                    <Cloud className="h-8 w-8 text-secondary" />
+                  <div className="p-3 rounded-lg bg-accent/20">
+                    <Cloud className="h-8 w-8 text-accent" />
                   </div>
                   <div>
                     <p className="font-semibold text-lg">AWS Cloud Practitioner Certified</p>
