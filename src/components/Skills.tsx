@@ -124,10 +124,9 @@ const Skills = () => {
             <Card className="p-6 bg-gradient-to-r from-accent/10 to-primary/10 border-accent/30 hover:border-accent/50 transition-all">
               <div className="flex items-center gap-6">
                 <a 
-                  href="/certificates/AWS_Certified_Cloud_Practitioner_certificate.pdf" 
+                  href="https://www.credly.com/badges/c799d536-c41e-491c-9254-b9418f268fc6/linked_in" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  download="AWS_Certified_Cloud_Practitioner_certificate.pdf"
                   className="shrink-0 group cursor-pointer"
                 >
                   <img 
