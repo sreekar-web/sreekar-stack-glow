@@ -1,6 +1,7 @@
 import { Download, Mail, ExternalLink, MapPin, GraduationCap, Award } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
+import profilePhoto from "@/assets/profile-photo.jpg";
 
 const Hero = () => {
   const scrollToSection = (id: string) => {
@@ -117,12 +118,13 @@ const Hero = () => {
               {/* Glow Effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-primary via-secondary to-accent rounded-full blur-3xl opacity-30 animate-glow-pulse" />
               
-              {/* Profile Image Placeholder */}
-              <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full border-4 border-primary/30 bg-gradient-to-br from-primary/20 via-card to-secondary/20 backdrop-blur-sm flex items-center justify-center overflow-hidden animate-float">
-                <div className="text-center p-8">
-                  <p className="text-muted-foreground text-sm mb-2">Profile Photo</p>
-                  <p className="text-xs text-muted-foreground/70">Add your professional headshot here</p>
-                </div>
+              {/* Profile Image */}
+              <div className="relative w-64 h-64 lg:w-80 lg:h-80 rounded-full border-4 border-primary/30 bg-gradient-to-br from-primary/20 via-card to-secondary/20 backdrop-blur-sm overflow-hidden animate-float">
+                <img 
+                  src={profilePhoto} 
+                  alt="Sreekar Rachakonda - Software Engineer" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
           </div>
