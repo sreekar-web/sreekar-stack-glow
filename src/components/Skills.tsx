@@ -97,10 +97,9 @@ const Skills = () => {
             <Card className="p-6 bg-gradient-to-r from-secondary/10 to-primary/10 border-secondary/30 hover:border-secondary/50 transition-all">
               <div className="flex items-center gap-6">
                 <a 
-                  href="/certificates/AWS_Certified_Developer_Associate_certificate.pdf" 
+                  href="https://www.credly.com/badges/d18d4d5c-5fea-4582-b884-65f83812ab86/linked_in?t=t5w34b" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  download="AWS_Certified_Developer_Associate_certificate.pdf"
                   className="shrink-0 group cursor-pointer"
                 >
                   <img 
