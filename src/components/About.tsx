@@ -1,22 +1,27 @@
 import { GraduationCap, Award, MapPin } from "lucide-react";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const About = () => {
+  const titleRef = useScrollAnimation();
+  const cardsRef = useScrollAnimation();
+  const bioRef = useScrollAnimation();
+
   return (
     <section id="about" className="py-20 lg:py-32 relative">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
+          <div ref={titleRef} className="text-center mb-16 scroll-animate">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
               About <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Me</span>
             </h2>
             <p className="text-muted-foreground text-lg">Get to know more about my background and journey</p>
           </div>
 
-          <div className="grid md:grid-cols-2 gap-6 mb-12">
+          <div ref={cardsRef} className="grid md:grid-cols-2 gap-6 mb-12 scroll-animate">
             {/* Education Card */}
-            <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all hover:scale-105 animate-fade-in">
+            <Card className="p-6 bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all hover:scale-105">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-primary/10">
                   <GraduationCap className="h-6 w-6 text-primary" />
@@ -31,7 +36,7 @@ const About = () => {
             </Card>
 
             {/* Certification Card */}
-            <Card className="p-6 bg-card/50 backdrop-blur-sm border-secondary/20 hover:border-secondary/40 transition-all hover:scale-105 animate-fade-in" style={{ animationDelay: "0.1s" }}>
+            <Card className="p-6 bg-card/50 backdrop-blur-sm border-secondary/20 hover:border-secondary/40 transition-all hover:scale-105">
               <div className="flex items-start gap-4">
                 <div className="p-3 rounded-lg bg-secondary/10">
                   <Award className="h-6 w-6 text-secondary" />
@@ -47,7 +52,7 @@ const About = () => {
           </div>
 
           {/* Bio Section */}
-          <Card className="p-8 bg-card/50 backdrop-blur-sm border-border hover:border-accent/40 transition-all animate-fade-in" style={{ animationDelay: "0.2s" }}>
+          <Card ref={bioRef} className="p-8 bg-card/50 backdrop-blur-sm border-border hover:border-accent/40 transition-all scroll-animate">
             <div className="space-y-4">
               <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
               

@@ -1,7 +1,11 @@
 import { Briefcase, Calendar } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Experience = () => {
+  const titleRef = useScrollAnimation();
+  const experience1Ref = useScrollAnimation();
+  const experience2Ref = useScrollAnimation();
   const experiences = [
     {
       company: "Qbarters Pvt Ltd",
@@ -33,7 +37,7 @@ const Experience = () => {
     <section id="experience" className="py-20 lg:py-32 relative">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
+          <div ref={titleRef} className="text-center mb-16 scroll-animate">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
               Work <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Experience</span>
             </h2>
@@ -41,39 +45,67 @@ const Experience = () => {
           </div>
 
           <div className="space-y-8">
-            {experiences.map((exp, index) => (
-              <Card 
-                key={index}
-                className="p-6 lg:p-8 bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all animate-fade-in"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
-                  <div className="flex items-start gap-4">
-                    <div className="p-3 rounded-lg bg-primary/10 shrink-0">
-                      <Briefcase className="h-6 w-6 text-primary" />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-semibold mb-1">{exp.role}</h3>
-                      <p className="text-lg text-foreground mb-1">{exp.company}</p>
-                      <p className="text-sm text-muted-foreground">{exp.location}</p>
-                    </div>
+            <Card 
+              ref={experience1Ref}
+              className="p-6 lg:p-8 bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all scroll-animate-left"
+            >
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-primary/10 shrink-0">
+                    <Briefcase className="h-6 w-6 text-primary" />
                   </div>
-                  <div className="flex items-center gap-2 text-muted-foreground lg:shrink-0">
-                    <Calendar className="h-4 w-4" />
-                    <span className="text-sm font-medium">{exp.period}</span>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-1">{experiences[0].role}</h3>
+                    <p className="text-lg text-foreground mb-1">{experiences[0].company}</p>
+                    <p className="text-sm text-muted-foreground">{experiences[0].location}</p>
                   </div>
                 </div>
+                <div className="flex items-center gap-2 text-muted-foreground lg:shrink-0">
+                  <Calendar className="h-4 w-4" />
+                  <span className="text-sm font-medium">{experiences[0].period}</span>
+                </div>
+              </div>
 
-                <ul className="space-y-3 ml-16">
-                  {exp.achievements.map((achievement, achIndex) => (
-                    <li key={achIndex} className="text-muted-foreground leading-relaxed flex items-start gap-2">
-                      <span className="text-primary mt-1.5 shrink-0">▪</span>
-                      <span>{achievement}</span>
-                    </li>
-                  ))}
-                </ul>
-              </Card>
-            ))}
+              <ul className="space-y-3 ml-16">
+                {experiences[0].achievements.map((achievement, achIndex) => (
+                  <li key={achIndex} className="text-muted-foreground leading-relaxed flex items-start gap-2">
+                    <span className="text-primary mt-1.5 shrink-0">▪</span>
+                    <span>{achievement}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
+
+            <Card 
+              ref={experience2Ref}
+              className="p-6 lg:p-8 bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all scroll-animate-right"
+            >
+              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
+                <div className="flex items-start gap-4">
+                  <div className="p-3 rounded-lg bg-primary/10 shrink-0">
+                    <Briefcase className="h-6 w-6 text-primary" />
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-1">{experiences[1].role}</h3>
+                    <p className="text-lg text-foreground mb-1">{experiences[1].company}</p>
+                    <p className="text-sm text-muted-foreground">{experiences[1].location}</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 text-muted-foreground lg:shrink-0">
+                  <Calendar className="h-4 w-4" />
+                  <span className="text-sm font-medium">{experiences[1].period}</span>
+                </div>
+              </div>
+
+              <ul className="space-y-3 ml-16">
+                {experiences[1].achievements.map((achievement, achIndex) => (
+                  <li key={achIndex} className="text-muted-foreground leading-relaxed flex items-start gap-2">
+                    <span className="text-primary mt-1.5 shrink-0">▪</span>
+                    <span>{achievement}</span>
+                  </li>
+                ))}
+              </ul>
+            </Card>
           </div>
         </div>
       </div>

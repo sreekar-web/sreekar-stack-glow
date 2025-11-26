@@ -3,9 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Portfolio = () => {
   const navigate = useNavigate();
+  const titleRef = useScrollAnimation();
+  const projectsRef = useScrollAnimation();
+  const footerRef = useScrollAnimation();
   
   const projects = [
     {
@@ -63,7 +67,7 @@ const Portfolio = () => {
     <section id="portfolio" className="py-20 lg:py-32 relative bg-muted/20">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
+          <div ref={titleRef} className="text-center mb-16 scroll-animate">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
               Featured <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Projects</span>
             </h2>
@@ -72,12 +76,11 @@ const Portfolio = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div ref={projectsRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-animate-scale">
             {projects.map((project, index) => (
               <Card
                 key={project.title}
-                className={`p-6 bg-card/50 backdrop-blur-sm transition-all hover:scale-105 animate-fade-in group ${getColorClasses(project.color)}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`p-6 bg-card/50 backdrop-blur-sm transition-all hover:scale-105 group ${getColorClasses(project.color)}`}
               >
                 <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
                   <Calendar className="h-4 w-4" />
@@ -118,7 +121,7 @@ const Portfolio = () => {
           </div>
 
           {/* Additional Info */}
-          <div className="mt-12 text-center animate-fade-in" style={{ animationDelay: "0.5s" }}>
+          <div ref={footerRef} className="mt-12 text-center scroll-animate">
             <Card className="p-6 bg-card/50 backdrop-blur-sm border-border">
               <p className="text-muted-foreground">
                 <span className="text-foreground font-medium">More projects coming soon!</span> Each project strengthened my expertise in scalable architectures, database design, and cloud technologies.

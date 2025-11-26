@@ -1,8 +1,11 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { FileText, Palette, Code, TestTube, Rocket, Settings } from "lucide-react";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const SDLC = () => {
+  const titleRef = useScrollAnimation();
+  const cardsRef = useScrollAnimation();
   const phases = [
     {
       icon: FileText,
@@ -87,7 +90,7 @@ const SDLC = () => {
   return (
     <section id="sdlc" className="py-20 px-4 sm:px-6 lg:px-8 bg-muted/30">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-12 animate-fade-in">
+        <div ref={titleRef} className="text-center mb-12 scroll-animate">
           <Badge variant="secondary" className="mb-4">
             Software Development Lifecycle
           </Badge>
@@ -99,14 +102,13 @@ const SDLC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div ref={cardsRef} className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 scroll-animate-scale">
           {phases.map((phase, index) => {
             const Icon = phase.icon;
             return (
               <Card 
                 key={index} 
-                className={`border-l-4 ${phase.color} hover:shadow-lg transition-all duration-300 hover:-translate-y-1 animate-fade-in`}
-                style={{ animationDelay: `${index * 100}ms` }}
+                className={`border-l-4 ${phase.color} hover:shadow-lg transition-all duration-300 hover:-translate-y-1`}
               >
                 <CardHeader>
                   <div className="flex items-center gap-3 mb-2">

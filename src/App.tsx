@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import ScrollToTop from "@/components/ScrollToTop";
+import { useLenis } from "@/hooks/useLenis";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
 import BankInstituteCase from "./pages/BankInstituteCase";
@@ -14,8 +15,11 @@ import StudentDatabaseCase from "./pages/StudentDatabaseCase";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
+const App = () => {
+  useLenis();
+  
+  return (
+    <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
       <Sonner />
@@ -34,6 +38,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;

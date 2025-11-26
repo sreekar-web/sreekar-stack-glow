@@ -6,9 +6,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Contact = () => {
   const { toast } = useToast();
+  const titleRef = useScrollAnimation();
+  const formRef = useScrollAnimation();
+  const infoRef = useScrollAnimation();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -111,7 +115,7 @@ const Contact = () => {
     <section id="contact" className="py-20 lg:py-32 relative">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
+          <div ref={titleRef} className="text-center mb-16 scroll-animate">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
               Get In <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Touch</span>
             </h2>
@@ -122,7 +126,7 @@ const Contact = () => {
 
           <div className="grid lg:grid-cols-2 gap-8">
             {/* Contact Form */}
-            <Card className="p-8 bg-card/50 backdrop-blur-sm border-border animate-fade-in-left">
+            <Card ref={formRef} className="p-8 bg-card/50 backdrop-blur-sm border-border scroll-animate-left">
               <h3 className="text-2xl font-semibold mb-6">Send a Message</h3>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
@@ -179,7 +183,7 @@ const Contact = () => {
             </Card>
 
             {/* Contact Info */}
-            <div className="space-y-6 animate-fade-in-right">
+            <div ref={infoRef} className="space-y-6 scroll-animate-right">
               <Card className="p-8 bg-card/50 backdrop-blur-sm border-border">
                 <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
                 <div className="space-y-6">
