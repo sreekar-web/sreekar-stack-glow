@@ -2,8 +2,12 @@ import { Code2, Database, Cloud, Layers } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import awsCertificate from "@/assets/aws-certificate.jpg";
+import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Skills = () => {
+  const titleRef = useScrollAnimation();
+  const skillsRef = useScrollAnimation();
+  const certsRef = useScrollAnimation();
   const skillCategories = [
     {
       icon: Code2,
@@ -53,7 +57,7 @@ const Skills = () => {
     <section id="skills" className="py-20 lg:py-32 relative bg-muted/20">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16 animate-fade-in">
+          <div ref={titleRef} className="text-center mb-16 scroll-animate">
             <h2 className="text-4xl lg:text-5xl font-bold mb-4">
               Technical <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Skills</span>
             </h2>
@@ -62,12 +66,11 @@ const Skills = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div ref={skillsRef} className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 scroll-animate-scale">
             {skillCategories.map((category, index) => (
               <Card
                 key={category.title}
-                className={`p-6 backdrop-blur-sm transition-all hover:scale-105 animate-fade-in ${getColorClasses(category.color)}`}
-                style={{ animationDelay: `${index * 0.1}s` }}
+                className={`p-6 backdrop-blur-sm transition-all hover:scale-105 ${getColorClasses(category.color)}`}
               >
                 <div className="mb-4">
                   <div className={`inline-flex p-3 rounded-lg bg-card/50`}>
@@ -93,7 +96,7 @@ const Skills = () => {
           </div>
 
           {/* AWS Certifications */}
-          <div className="mt-12 space-y-4 animate-fade-in" style={{ animationDelay: "0.4s" }}>
+          <div ref={certsRef} className="mt-12 space-y-4 scroll-animate">
             <Card className="p-6 bg-gradient-to-r from-secondary/10 to-primary/10 border-secondary/30 hover:border-secondary/50 transition-all">
               <div className="flex items-center gap-6">
                 <a 
