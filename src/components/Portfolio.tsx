@@ -18,7 +18,7 @@ const Portfolio = () => {
       description: "Deployed a static portfolio website using S3 as origin and CloudFront CDN for global delivery. Configured ACM for SSL certificates, GitHub Actions CI/CD for automated deployments, and secure IAM access with DNS routing.",
       tags: ["AWS S3", "CloudFront", "ACM", "CI/CD", "GitHub Actions"],
       color: "primary",
-      link: "",
+      link: "/case/aws-cloud",
     },
     {
       title: "Bank and Institute App",
