@@ -12,6 +12,7 @@ import DronesAgricultureCase from "./pages/DronesAgricultureCase";
 import OnlineCarBookingCase from "./pages/OnlineCarBookingCase";
 import ProgressiveWebChatCase from "./pages/ProgressiveWebChatCase";
 import StudentDatabaseCase from "./pages/StudentDatabaseCase";
+import AWSCloudCase from "./pages/AWSCloudCase";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +28,7 @@ const App = () => {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/case/aws-cloud" element={<AWSCloudCase />} />
           <Route path="/case/bank-institute" element={<BankInstituteCase />} />
           <Route path="/case/drones-agriculture" element={<DronesAgricultureCase />} />
           <Route path="/case/car-booking" element={<OnlineCarBookingCase />} />
