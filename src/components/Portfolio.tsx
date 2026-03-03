@@ -13,6 +13,14 @@ const Portfolio = () => {
   
   const projects = [
     {
+      title: "Portfolio on AWS Cloud",
+      timeframe: "2025",
+      description: "Deployed a static portfolio website using S3 as origin and CloudFront CDN for global delivery. Configured ACM for SSL certificates, GitHub Actions CI/CD for automated deployments, and secure IAM access with DNS routing.",
+      tags: ["AWS S3", "CloudFront", "ACM", "CI/CD", "GitHub Actions"],
+      color: "primary",
+      link: "",
+    },
+    {
       title: "Bank and Institute App",
       timeframe: "Jun 2024 – Aug 2024",
       description: "Salesforce-based application managing operations and data for banks and educational institutes using interconnected SQL tables. Emphasized data modeling, integration, and platform customization.",
