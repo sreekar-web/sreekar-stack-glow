@@ -60,14 +60,6 @@ const Portfolio = () => {
       color: "accent",
       link: "/case/chat-app",
     },
-    {
-      title: "Online Car Booking System",
-      timeframe: "Sep 2020 – Dec 2020",
-      description: "Backend system in JavaScript with SQL persistence for managing car bookings. Implemented booking flows and data storage with focus on reliability.",
-      tags: ["JavaScript", "SQL", "Backend", "REST API"],
-      color: "secondary",
-      link: "/case/car-booking",
-    },
   ];
 
   const getColorClasses = (color: string) => {
