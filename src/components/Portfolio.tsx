@@ -14,7 +14,7 @@ const Portfolio = () => {
   const projects = [
     {
       title: "Serverless Order Processing System",
-      timeframe: "2025",
+      timeframe: "Mar 2026",
       description: "Event-driven backend on AWS using Lambda, API Gateway, SQS, and DynamoDB. Features queue-based async processing, Dead Letter Queues, SAM infrastructure as code, and CI/CD with GitHub Actions.",
       tags: ["AWS Lambda", "SQS", "DynamoDB", "SAM", "CI/CD"],
       color: "primary",
