@@ -1,0 +1,25 @@
+{
+ "name": "Sreekar Rachakonda",
+ "role": "AWS / Cloud Developer",
+
+ "skills":[
+  "AWS",
+  "React",
+  "TypeScript",
+  "Serverless Architecture",
+  "CI/CD",
+  "API Gateway",
+  "Lambda"
+ ],
+
+ "projects":[
+  {
+   "name":"AWS Serverless Portfolio",
+   "description":"React portfolio deployed on AWS using S3, CloudFront and GitHub Actions CI/CD."
+  },
+  {
+   "name":"Job Application MCP Tool",
+   "description":"Automation system for job applications."
+  }
+ ]
+}
