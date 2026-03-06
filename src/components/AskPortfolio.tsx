@@ -30,7 +30,6 @@ export default function AskPortfolio() {
   }
 
   return (
-
     <div className="mt-20 p-6 border rounded-xl max-w-xl mx-auto">
 
       <h2 className="text-2xl font-bold mb-4">
