@@ -8,6 +8,7 @@ import SDLC from "@/components/SDLC";
 import Portfolio from "@/components/Portfolio";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import AskPortfolio from "@/components/AskPortfolio";
 
 const Index = () => {
   return (
@@ -21,6 +22,7 @@ const Index = () => {
         <Services />
         <SDLC />
         <Portfolio />
+        <AskPortfolio />
         <Contact />
       </main>
       <Footer />
