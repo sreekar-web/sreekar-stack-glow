@@ -1,25 +1,118 @@
 {
- "name": "Sreekar Rachakonda",
- "role": "AWS / Cloud Developer",
+  "name": "Sreekar Rachakonda",
+  "role": "Full-Stack Software Engineer",
+  "tagline": "I build scalable, cloud-ready web applications end-to-end.",
+  "location": "Atlanta, Georgia, US",
+  "email": "rachakondasreekar9@gmail.com",
+  "phone": "470-965-3789",
+  "linkedin": "https://www.linkedin.com/in/sreekar-rachakonda-34b9a4321",
+  "availability": "Actively seeking full-time software engineering roles starting May 2025",
 
- "skills":[
-  "AWS",
-  "React",
-  "TypeScript",
-  "Serverless Architecture",
-  "CI/CD",
-  "API Gateway",
-  "Lambda"
- ],
-
- "projects":[
-  {
-   "name":"AWS Serverless Portfolio",
-   "description":"React portfolio deployed on AWS using S3, CloudFront and GitHub Actions CI/CD."
+  "education": {
+    "degree": "Master of Science in Computer Science",
+    "university": "University of Alabama at Birmingham (UAB)",
+    "graduationDate": "May 2025"
   },
-  {
-   "name":"Job Application MCP Tool",
-   "description":"Automation system for job applications."
-  }
- ]
+
+  "certifications": [
+    {
+      "name": "AWS Certified Developer – Associate",
+      "issuer": "Amazon Web Services",
+      "description": "Application development, deployment, and debugging on AWS"
+    },
+    {
+      "name": "AWS Certified Cloud Practitioner",
+      "issuer": "Amazon Web Services",
+      "description": "Cloud fundamentals, deployment strategies, and AWS services"
+    }
+  ],
+
+  "skills": {
+    "frontend": ["JavaScript", "TypeScript", "React", "HTML/CSS", "PWA"],
+    "backend": ["Python", "Node.js", "REST APIs", "Salesforce"],
+    "databases": ["SQL", "PostgreSQL", "DynamoDB", "Database Design", "Data Modeling"],
+    "cloudAndTools": ["AWS (S3, CloudFront, Lambda, API Gateway, SQS, DynamoDB, Bedrock, SAM, ACM, IAM)", "Cloud Deployment", "Git", "CI/CD", "GitHub Actions", "Serverless Architecture"]
+  },
+
+  "experience": [
+    {
+      "company": "Qbarters Pvt Ltd",
+      "location": "Bangalore, India",
+      "role": "Junior Software Engineer",
+      "period": "Jul 2021 – Dec 2022",
+      "achievements": [
+        "Created and sustained 6 software applications with an 85% average bug-free code deployment rate.",
+        "Designed and implemented a payment page using JavaScript Payment SDK and integrated it with SQL database for transaction tracking.",
+        "Built real-time delivery tracking system using JavaScript, WebSockets, and SQL to deliver live updates and enhance customer experience.",
+        "Implemented features using Python, JavaScript, and SQL with relational data management via primary keys.",
+        "Collaborated with product, design, and QA teams to deliver projects on time."
+      ]
+    },
+    {
+      "company": "Letsgettin Pvt Ltd",
+      "location": "Bangalore, India",
+      "role": "Software Engineer Intern",
+      "period": "Jan 2021 – Jun 2021",
+      "achievements": [
+        "Fixed bugs during product deployment and improved code quality.",
+        "Participated in sprint planning, learning agile workflows and project tracking.",
+        "Created case models based on business requirements and product goals."
+      ]
+    }
+  ],
+
+  "projects": [
+    {
+      "name": "Serverless Order Processing System",
+      "timeframe": "Mar 2026",
+      "description": "Event-driven backend on AWS using Lambda, API Gateway, SQS, and DynamoDB. Features queue-based async processing, Dead Letter Queues, SAM infrastructure as code, and CI/CD with GitHub Actions.",
+      "technologies": ["AWS Lambda", "SQS", "DynamoDB", "SAM", "CI/CD"]
+    },
+    {
+      "name": "Portfolio on AWS Cloud",
+      "timeframe": "Feb 2026",
+      "description": "Deployed a static portfolio website using S3 as origin and CloudFront CDN for global delivery. Configured ACM for SSL certificates, GitHub Actions CI/CD for automated deployments, and secure IAM access with DNS routing.",
+      "technologies": ["AWS S3", "CloudFront", "ACM", "CI/CD", "GitHub Actions"]
+    },
+    {
+      "name": "Bank and Institute App",
+      "timeframe": "Jun 2024 – Aug 2024",
+      "description": "Salesforce-based application managing operations and data for banks and educational institutes using interconnected SQL tables. Emphasized data modeling, integration, and platform customization.",
+      "technologies": ["Salesforce", "SQL", "Data Modeling", "Integration"]
+    },
+    {
+      "name": "Drones in Agriculture",
+      "timeframe": "Sep 2023 – Nov 2023",
+      "description": "Led backend programming and flight control implementation with JavaScript dashboard for real-time telemetry. Trained a basic ML model for decision-making in agricultural drone operations.",
+      "technologies": ["JavaScript", "IoT", "ML", "Backend"]
+    },
+    {
+      "name": "Student Database System",
+      "timeframe": "Feb 2022 – Jun 2022",
+      "description": "Web application in Python to manage student academic data with dashboard UI and SQL database integration. Streamlined data management for educational institutions.",
+      "technologies": ["Python", "SQL", "Web App", "Dashboard"]
+    },
+    {
+      "name": "Progressive Web Chat App",
+      "timeframe": "Feb 2021 – May 2021",
+      "description": "Secure chat application with encryption, WhatsApp-style interface, and PWA principles for cross-platform usability. Built with Python focusing on security and user experience.",
+      "technologies": ["Python", "PWA", "Security", "Chat"]
+    },
+    {
+      "name": "Job Application MCP Tool",
+      "timeframe": "2026",
+      "description": "Automation system for job applications.",
+      "technologies": ["Automation"]
+    }
+  ],
+
+  "services": [
+    "Full-Stack Web Development",
+    "AWS Cloud Architecture & Deployment",
+    "Serverless Application Design",
+    "Database Design & Optimization",
+    "CI/CD Pipeline Setup"
+  ],
+
+  "about": "Passionate software engineer with a strong focus on building scalable web applications. Combines a Master's degree in Computer Science from UAB with AWS Developer Associate certification, blending academic rigor with practical cloud expertise. Experience spans full-stack development, database design, and cloud-ready deployments across diverse domains including banking, agriculture IoT, and real-time communication."
 }
