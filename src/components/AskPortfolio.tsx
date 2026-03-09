@@ -11,12 +11,13 @@ export default function AskPortfolio() {
   const [question, setQuestion] = useState("");
   const [loading, setLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const chatContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (messages.length > 0) {
-      messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    if (messages.length > 0 && chatContainerRef.current) {
+      chatContainerRef.current.scrollTop = chatContainerRef.current.scrollHeight;
     }
-  }, [messages]);
+  }, [messages, loading]);
 
   async function askAI() {
     const trimmed = question.trim();
@@ -79,7 +80,7 @@ export default function AskPortfolio() {
         {/* Chat Container */}
         <div className="rounded-2xl border border-border bg-card overflow-hidden shadow-lg">
           {/* Messages Area */}
-          <div className="h-72 overflow-y-auto p-4 space-y-4 scrollbar-thin">
+          <div ref={chatContainerRef} className="h-72 overflow-y-auto p-4 space-y-4 scrollbar-thin">
             {messages.length === 0 && (
               <div className="flex flex-col items-center justify-center h-full text-muted-foreground gap-3">
                 <Bot className="w-10 h-10 text-primary/40" />
