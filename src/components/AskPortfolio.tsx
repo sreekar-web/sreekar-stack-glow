@@ -114,10 +114,29 @@ export default function AskPortfolio() {
                   className={`max-w-[75%] rounded-xl px-4 py-2.5 text-sm leading-relaxed ${
                     msg.role === "user"
                       ? "bg-primary text-primary-foreground rounded-tr-sm"
-                      : "bg-muted text-foreground rounded-tl-sm"
+                      : "bg-muted text-foreground rounded-tl-sm whitespace-pre-line"
                   }`}
                 >
-                  {msg.content}
+                  {msg.role === "assistant" ? (
+                    <div className="space-y-2">
+                      {msg.content.split('\n').filter(Boolean).map((line, idx) => {
+                        const bulletMatch = line.match(/^[\s]*[-•*]\s+(.*)/);
+                        const numberedMatch = line.match(/^[\s]*(\d+)[.)]\s+(.*)/);
+                        if (bulletMatch) {
+                          return <li key={idx} className="ml-4 list-disc">{bulletMatch[1]}</li>;
+                        }
+                        if (numberedMatch) {
+                          return <li key={idx} className="ml-4 list-decimal">{numberedMatch[2]}</li>;
+                        }
+                        const boldProcessed = line.split(/\*\*(.*?)\*\*/g).map((part, i) =>
+                          i % 2 === 1 ? <strong key={i}>{part}</strong> : part
+                        );
+                        return <p key={idx}>{boldProcessed}</p>;
+                      })}
+                    </div>
+                  ) : (
+                    msg.content
+                  )}
                 </div>
               </div>
             ))}
