@@ -1,0 +1,87 @@
+[
+  {
+    "id": "about",
+    "type": "about",
+    "content": "Sreekar Rachakonda is a Full-Stack Software Engineer based in Atlanta, Georgia. He builds scalable, cloud-ready web applications end-to-end. He holds a Master of Science in Computer Science from the University of Alabama at Birmingham graduating in May 2025 and is actively seeking full-time software engineering roles starting May 2025."
+  },
+  {
+    "id": "education",
+    "type": "education",
+    "content": "Master of Science in Computer Science from the University of Alabama at Birmingham (UAB), graduating May 2025."
+  },
+  {
+    "id": "certification-aws-developer",
+    "type": "certification",
+    "content": "AWS Certified Developer – Associate by Amazon Web Services focusing on application development, deployment, and debugging on AWS."
+  },
+  {
+    "id": "certification-aws-cloud-practitioner",
+    "type": "certification",
+    "content": "AWS Certified Cloud Practitioner by Amazon Web Services covering cloud fundamentals, deployment strategies, and AWS services."
+  },
+  {
+    "id": "skills-frontend",
+    "type": "skills",
+    "content": "Frontend technologies include JavaScript, TypeScript, React, HTML, CSS, and Progressive Web Apps."
+  },
+  {
+    "id": "skills-backend",
+    "type": "skills",
+    "content": "Backend technologies include Python, Node.js, REST API development, and Salesforce integrations."
+  },
+  {
+    "id": "skills-databases",
+    "type": "skills",
+    "content": "Database skills include SQL, PostgreSQL, DynamoDB, database design, and data modeling."
+  },
+  {
+    "id": "skills-cloud",
+    "type": "skills",
+    "content": "Cloud and DevOps skills include AWS services such as S3, CloudFront, Lambda, API Gateway, SQS, DynamoDB, Bedrock, SAM, ACM, IAM along with Git, CI/CD pipelines, GitHub Actions, and serverless architecture."
+  },
+  {
+    "id": "experience-qbarters",
+    "type": "experience",
+    "content": "Junior Software Engineer at Qbarters Pvt Ltd in Bangalore from July 2021 to December 2022. Developed and maintained six production software applications used by customers and internal operations teams. Achieved an average deployment stability rate of around 85 percent bug-free releases through improved testing and debugging practices. Built a payment processing page using a JavaScript payment SDK and integrated it with a relational SQL database to track transactions and maintain financial records. Designed and implemented a real-time delivery tracking feature using JavaScript, WebSockets, and SQL which allowed customers to see live order status updates. Implemented backend features using Python and JavaScript and structured relational databases with primary keys and normalized tables for reliable data management. Worked closely with product managers, designers, and QA engineers during development cycles to deliver features on time and maintain production stability."
+  },
+  {
+    "id": "experience-letsgettin",
+    "type": "experience",
+    "content": "Software Engineer Intern at Letsgettin Pvt Ltd in Bangalore from January 2021 to June 2021. Worked on debugging and resolving issues during product deployment phases, improving application reliability before production releases. Participated in agile sprint planning meetings and learned how development tasks are broken down and tracked in iterative development cycles. Helped translate business requirements into technical case models and application workflows that guided development. Contributed to code reviews and learned best practices for maintainable code and collaborative development."
+  },
+  {
+    "id": "project-serverless-order-processing",
+    "type": "project",
+    "content": "Serverless Order Processing System built in March 2026. Designed an event-driven backend architecture using AWS Lambda, API Gateway, SQS, and DynamoDB. Orders are received through an API Gateway endpoint which triggers a Lambda function responsible for validating requests and sending messages to an SQS queue. Worker Lambda functions consume messages from the queue and process orders asynchronously, enabling scalable background processing. Implemented Dead Letter Queues to handle failed messages and ensure reliability. Infrastructure was defined using AWS SAM allowing repeatable deployments and infrastructure-as-code practices. CI/CD pipelines were implemented using GitHub Actions to automate testing and deployment. The system demonstrates serverless design patterns including decoupled microservices, asynchronous processing, and resilient event-driven workflows."
+  },
+  {
+    "id": "project-portfolio-aws",
+    "type": "project",
+    "content": "Portfolio on AWS Cloud built in February 2026. Designed and deployed a static portfolio website using Amazon S3 as the hosting origin and CloudFront as a global content delivery network to provide fast access worldwide. Configured SSL certificates using AWS Certificate Manager to enable secure HTTPS connections. Implemented GitHub Actions workflows to automatically deploy updates to the S3 bucket whenever code changes are pushed to the repository. Managed secure IAM roles and permissions to control deployment access. The project demonstrates modern cloud deployment patterns including serverless hosting, CDN distribution, automated CI/CD pipelines, and secure infrastructure configuration."
+  },
+  {
+    "id": "project-bank-institute-app",
+    "type": "project",
+    "content": "Bank and Institute App developed between June 2024 and August 2024. Built a Salesforce-based enterprise application designed to manage operational data for banks and educational institutions. Implemented relational data models using interconnected SQL tables to organize financial and institutional data. Designed workflows and integration logic to automate internal processes and data sharing between modules. Focused on robust data modeling and integration strategies to ensure accurate data relationships and efficient data retrieval."
+  },
+  {
+    "id": "project-drones-agriculture",
+    "type": "project",
+    "content": "Drones in Agriculture project developed between September 2023 and November 2023. Led backend development for drone control systems used in agricultural monitoring. Built a JavaScript-based telemetry dashboard that displayed real-time flight data and environmental information from drones. Integrated sensor data streams to monitor drone position and flight status. Trained a basic machine learning model to assist in agricultural decision making based on collected field data. The project combines IoT systems, real-time data visualization, and machine learning techniques."
+  },
+  {
+    "id": "project-student-database",
+    "type": "project",
+    "content": "Student Database System developed between February 2022 and June 2022. Built a Python-based web application for managing student academic records. Designed a dashboard interface for administrators to view, update, and organize student information. Integrated a SQL database to store academic records and implemented queries for efficient data retrieval. The system streamlined administrative tasks by centralizing student data and providing a structured management interface."
+  },
+  {
+    "id": "project-pwa-chat-app",
+    "type": "project",
+    "content": "Progressive Web Chat App built between February 2021 and May 2021. Designed a secure messaging application using Python backend services and progressive web application principles. Implemented encrypted communication between users and created a chat interface similar to modern messaging applications. The PWA architecture allows the application to run across multiple devices including mobile and desktop browsers without requiring installation from an app store."
+  },
+  {
+    "id": "project-job-application-mcp",
+    "type": "project",
+    "content": "Job Application MCP Tool built in 2026 to automate repetitive parts of the job application process. Designed to streamline tasks such as filling application forms, organizing job listings, and tracking submitted applications. The tool demonstrates automation design principles and workflow optimization for large-scale job searching."
+  }
+]
