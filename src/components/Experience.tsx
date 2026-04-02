@@ -42,17 +42,6 @@ const Experience = () => {
         "Implemented features using Python, JavaScript, and SQL with relational data management via primary keys.",
         "Collaborated with product, design, and QA teams to deliver projects on time."
       ]
-    },
-    {
-      company: "Letsgettin Pvt Ltd",
-      location: "Bangalore, India",
-      role: "Software Engineer Intern",
-      period: "Jan 2021 – Jun 2021",
-      achievements: [
-        "Fixed bugs during product deployment and improved code quality.",
-        "Participated in sprint planning, learning agile workflows and project tracking.",
-        "Created case models based on business requirements and product goals."
-      ]
     }
   ];
 
