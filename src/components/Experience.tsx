@@ -10,7 +10,7 @@ const Experience = () => {
       company: "Zentech Consulting Inc",
       location: "United States",
       role: "EDI Developer",
-      period: "2025 – Present",
+      period: "Feb 2026 – Present",
       achievements: [
         "Working with SEEBURGER BIS landscape in an ERP environment for EDI integration and data exchange.",
         "Developing and maintaining EDI mappings and business process configurations for enterprise clients.",
