@@ -4,9 +4,19 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Experience = () => {
   const titleRef = useScrollAnimation();
-  const experience1Ref = useScrollAnimation();
-  const experience2Ref = useScrollAnimation();
+  const experienceRefs = [useScrollAnimation(), useScrollAnimation(), useScrollAnimation()];
   const experiences = [
+    {
+      company: "Zentech Consulting Inc",
+      location: "United States",
+      role: "EDI Developer",
+      period: "2025 – Present",
+      achievements: [
+        "Working with SEEBURGER BIS landscape in an ERP environment for EDI integration and data exchange.",
+        "Developing and maintaining EDI mappings and business process configurations for enterprise clients.",
+        "Collaborating with cross-functional teams to ensure seamless electronic data interchange across systems."
+      ]
+    },
     {
       company: "Qbarters Pvt Ltd",
       location: "Bangalore, India",
@@ -33,6 +43,8 @@ const Experience = () => {
     }
   ];
 
+  const animationClasses = ["scroll-animate-left", "scroll-animate-right", "scroll-animate-left"];
+
   return (
     <section id="experience" className="py-20 lg:py-32 relative">
       <div className="container mx-auto px-4 lg:px-8">
@@ -45,67 +57,39 @@ const Experience = () => {
           </div>
 
           <div className="space-y-8">
-            <Card 
-              ref={experience1Ref}
-              className="p-6 lg:p-8 bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all scroll-animate-left"
-            >
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/10 shrink-0">
-                    <Briefcase className="h-6 w-6 text-primary" />
+            {experiences.map((exp, index) => (
+              <Card
+                key={index}
+                ref={experienceRefs[index]}
+                className={`p-6 lg:p-8 bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all ${animationClasses[index]}`}
+              >
+                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
+                  <div className="flex items-start gap-4">
+                    <div className="p-3 rounded-lg bg-primary/10 shrink-0">
+                      <Briefcase className="h-6 w-6 text-primary" />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-semibold mb-1">{exp.role}</h3>
+                      <p className="text-lg text-foreground mb-1">{exp.company}</p>
+                      <p className="text-sm text-muted-foreground">{exp.location}</p>
+                    </div>
                   </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-1">{experiences[0].role}</h3>
-                    <p className="text-lg text-foreground mb-1">{experiences[0].company}</p>
-                    <p className="text-sm text-muted-foreground">{experiences[0].location}</p>
+                  <div className="flex items-center gap-2 text-muted-foreground lg:shrink-0">
+                    <Calendar className="h-4 w-4" />
+                    <span className="text-sm font-medium">{exp.period}</span>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-muted-foreground lg:shrink-0">
-                  <Calendar className="h-4 w-4" />
-                  <span className="text-sm font-medium">{experiences[0].period}</span>
-                </div>
-              </div>
 
-              <ul className="space-y-3 ml-16">
-                {experiences[0].achievements.map((achievement, achIndex) => (
-                  <li key={achIndex} className="text-muted-foreground leading-relaxed flex items-start gap-2">
-                    <span className="text-primary mt-1.5 shrink-0">▪</span>
-                    <span>{achievement}</span>
-                  </li>
-                ))}
-              </ul>
-            </Card>
-
-            <Card 
-              ref={experience2Ref}
-              className="p-6 lg:p-8 bg-card/50 backdrop-blur-sm border-primary/20 hover:border-primary/40 transition-all scroll-animate-right"
-            >
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-6">
-                <div className="flex items-start gap-4">
-                  <div className="p-3 rounded-lg bg-primary/10 shrink-0">
-                    <Briefcase className="h-6 w-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-xl font-semibold mb-1">{experiences[1].role}</h3>
-                    <p className="text-lg text-foreground mb-1">{experiences[1].company}</p>
-                    <p className="text-sm text-muted-foreground">{experiences[1].location}</p>
-                  </div>
-                </div>
-                <div className="flex items-center gap-2 text-muted-foreground lg:shrink-0">
-                  <Calendar className="h-4 w-4" />
-                  <span className="text-sm font-medium">{experiences[1].period}</span>
-                </div>
-              </div>
-
-              <ul className="space-y-3 ml-16">
-                {experiences[1].achievements.map((achievement, achIndex) => (
-                  <li key={achIndex} className="text-muted-foreground leading-relaxed flex items-start gap-2">
-                    <span className="text-primary mt-1.5 shrink-0">▪</span>
-                    <span>{achievement}</span>
-                  </li>
-                ))}
-              </ul>
-            </Card>
+                <ul className="space-y-3 ml-16">
+                  {exp.achievements.map((achievement, achIndex) => (
+                    <li key={achIndex} className="text-muted-foreground leading-relaxed flex items-start gap-2">
+                      <span className="text-primary mt-1.5 shrink-0">▪</span>
+                      <span>{achievement}</span>
+                    </li>
+                  ))}
+                </ul>
+              </Card>
+            ))}
           </div>
         </div>
       </div>
