@@ -36,6 +36,17 @@
 
   "experience": [
     {
+      "company": "Zentech Consulting Inc",
+      "location": "United States",
+      "role": "EDI Developer",
+      "period": "2025 – Present",
+      "achievements": [
+        "Working with SEEBURGER BIS landscape in an ERP environment for EDI integration and data exchange.",
+        "Developing and maintaining EDI mappings and business process configurations for enterprise clients.",
+        "Collaborating with cross-functional teams to ensure seamless electronic data interchange across systems."
+      ]
+    },
+    {
       "company": "Qbarters Pvt Ltd",
       "location": "Bangalore, India",
       "role": "Junior Software Engineer",
