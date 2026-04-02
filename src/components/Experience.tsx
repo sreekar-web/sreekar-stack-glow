@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Experience = () => {
   const titleRef = useScrollAnimation();
-  const experienceRefs = [useScrollAnimation(), useScrollAnimation(), useScrollAnimation()];
+  const experienceRefs = [useScrollAnimation(), useScrollAnimation(), useScrollAnimation(), useScrollAnimation()];
   const experiences = [
     {
       company: "Zentech Consulting Inc",
@@ -15,6 +15,19 @@ const Experience = () => {
         "Working with SEEBURGER BIS landscape in an ERP environment for EDI integration and data exchange.",
         "Developing and maintaining EDI mappings and business process configurations for enterprise clients.",
         "Collaborating with cross-functional teams to ensure seamless electronic data interchange across systems."
+      ]
+    },
+    {
+      company: "Viz Digital Marketing, LLC",
+      location: "United States",
+      role: "Software Developer",
+      period: "Nov 2025 – Feb 2026",
+      achievements: [
+        "Designed, developed, and maintained software applications based on client and business requirements.",
+        "Developed and maintained APIs, web services, and database interactions for scalable and secure applications.",
+        "Collaborated with cross-functional teams including analysts, designers, and testers to ensure high-quality delivery.",
+        "Utilized Agile/Scrum methodologies for sprint planning, task management, and continuous improvement.",
+        "Performed unit and integration testing to ensure functionality, performance, and reliability."
       ]
     },
     {
@@ -43,7 +56,7 @@ const Experience = () => {
     }
   ];
 
-  const animationClasses = ["scroll-animate-left", "scroll-animate-right", "scroll-animate-left"];
+  const animationClasses = ["scroll-animate-left", "scroll-animate-right", "scroll-animate-left", "scroll-animate-right"];
 
   return (
     <section id="experience" className="py-20 lg:py-32 relative">
