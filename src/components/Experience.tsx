@@ -56,7 +56,7 @@ const Experience = () => {
     }
   ];
 
-  const animationClasses = ["scroll-animate-left", "scroll-animate-right", "scroll-animate-left"];
+  const animationClasses = ["scroll-animate-left", "scroll-animate-right", "scroll-animate-left", "scroll-animate-right"];
 
   return (
     <section id="experience" className="py-20 lg:py-32 relative">
