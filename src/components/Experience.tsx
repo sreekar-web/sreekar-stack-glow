@@ -4,7 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const Experience = () => {
   const titleRef = useScrollAnimation();
-  const experienceRefs = [useScrollAnimation(), useScrollAnimation(), useScrollAnimation()];
+  const experienceRefs = [useScrollAnimation(), useScrollAnimation(), useScrollAnimation(), useScrollAnimation()];
   const experiences = [
     {
       company: "Zentech Consulting Inc",
