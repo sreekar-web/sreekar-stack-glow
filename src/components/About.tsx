@@ -57,15 +57,15 @@ const About = () => {
               <h3 className="text-2xl font-semibold mb-4">My Journey</h3>
               
               <p className="text-muted-foreground leading-relaxed">
-                I'm a passionate software engineer with a strong focus on building scalable web applications that make a real impact. My journey in tech has been driven by curiosity and a desire to solve complex problems through elegant code.
+                I'm an aspiring AWS and Cloud Developer with hands-on experience in enterprise ERP environments. Currently working as an EDI Developer at Zentech Consulting, I specialize in system integration and data exchange using SEEBURGER BIS within ERP landscapes — giving me a strong foundation in how enterprise systems communicate at scale.
               </p>
               
               <p className="text-muted-foreground leading-relaxed">
-                With a Master's degree in Computer Science from the University of Alabama at Birmingham and AWS Developer Associate certification, I combine academic rigor with practical cloud expertise. My hands-on experience spans full-stack development, database design, and cloud-ready deployments.
+                With a Master's in Computer Science from the University of Alabama at Birmingham and an AWS Developer Associate certification, I'm focused on transitioning into cloud-native development. I've built serverless architectures using Lambda, API Gateway, SQS, and DynamoDB, and deployed production workloads with S3, CloudFront, and CI/CD pipelines through GitHub Actions.
               </p>
               
               <p className="text-muted-foreground leading-relaxed">
-                From developing Salesforce applications for banking operations to implementing drone telemetry systems and building progressive web apps, I've tackled diverse technical challenges. Each project has strengthened my commitment to writing maintainable, scalable code and leveraging cloud technologies for optimal performance.
+                My goal is to combine my ERP integration expertise with cloud engineering skills to design scalable, event-driven systems on AWS. I bring a unique blend of enterprise software experience and modern cloud development practices to every project I take on.
               </p>
 
               {/* Availability Banner */}

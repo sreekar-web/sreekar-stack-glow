@@ -127,5 +127,5 @@
     "CI/CD Pipeline Setup"
   ],
 
-  "about": "Passionate software engineer with a strong focus on building scalable web applications. Combines a Master's degree in Computer Science from UAB with AWS Developer Associate certification, blending academic rigor with practical cloud expertise. Experience spans full-stack development, database design, and cloud-ready deployments across diverse domains including banking, agriculture IoT, and real-time communication."
+  "about": "Aspiring AWS and Cloud Developer with hands-on experience in enterprise ERP environments. Currently working as an EDI Developer at Zentech Consulting, specializing in system integration and data exchange using SEEBURGER BIS within ERP landscapes. Holds a Master's in Computer Science from UAB and an AWS Developer Associate certification. Experienced in building serverless architectures using Lambda, API Gateway, SQS, and DynamoDB, and deploying production workloads with S3, CloudFront, and CI/CD pipelines. Combines ERP integration expertise with modern cloud engineering skills to design scalable, event-driven systems on AWS."
 }
