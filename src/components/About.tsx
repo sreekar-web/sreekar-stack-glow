@@ -74,7 +74,7 @@ const About = () => {
                   <MapPin className="h-5 w-5 text-accent" />
                   <div>
                     <p className="text-foreground font-medium">Based in Dallas, Texas</p>
-                    <p className="text-sm text-muted-foreground">Actively seeking full-time software engineering roles starting May 2025</p>
+                    <p className="text-sm text-muted-foreground">Actively seeking full-time opportunities in both software & cloud development roles</p>
                   </div>
                 </div>
               </div>
