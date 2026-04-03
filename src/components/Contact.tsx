@@ -220,7 +220,7 @@ const Contact = () => {
               <Card className="p-6 bg-gradient-to-r from-primary/10 to-secondary/10 border-primary/20">
                 <h4 className="font-semibold text-lg mb-2">Open to Opportunities</h4>
                 <p className="text-muted-foreground text-sm">
-                  Actively seeking full-time software engineering roles starting May 2025. Let's connect and discuss how I can contribute to your team!
+                  Actively seeking full-time opportunities in software and cloud development roles. Let's connect and discuss how I can contribute to your team!
                 </p>
               </Card>
             </div>
