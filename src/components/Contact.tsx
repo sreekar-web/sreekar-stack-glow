@@ -81,7 +81,7 @@ const Contact = () => {
     {
       icon: MapPin,
       label: "Location",
-      value: "Atlanta, Georgia, US",
+      value: "Dallas, Texas, US",
       color: "accent",
     },
     {
