@@ -44,7 +44,7 @@ const Footer = () => {
                 Sreekar Rachakonda
               </h3>
               <p className="text-sm text-muted-foreground">
-                Full-Stack Software Engineer building scalable, cloud-ready applications.
+                AWS & Cloud Developer building scalable, cloud-ready applications with ERP integration expertise.
               </p>
               <div className="flex gap-2">
                 {socialLinks.map((social) => (
