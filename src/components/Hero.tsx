@@ -44,7 +44,7 @@ const Hero = () => {
               </h1>
               
               <h2 className="text-2xl lg:text-3xl font-semibold text-muted-foreground">
-                Full-Stack Software Engineer
+                AWS & Cloud Developer
               </h2>
               
               <p className="text-lg text-muted-foreground max-w-xl">

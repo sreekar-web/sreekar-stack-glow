@@ -19,19 +19,19 @@ const Skills = () => {
       icon: Layers,
       title: "Backend",
       color: "secondary",
-      skills: ["Python", "Node.js", "REST APIs", "Salesforce"],
+      skills: ["Python", "Node.js", "REST APIs", "Salesforce", "EDI/SEEBURGER BIS"],
     },
     {
       icon: Database,
       title: "Databases",
       color: "accent",
-      skills: ["SQL", "PostgreSQL", "Database Design", "Data Modeling"],
+      skills: ["SQL", "PostgreSQL", "DynamoDB", "Database Design", "Data Modeling"],
     },
     {
       icon: Cloud,
-      title: "Cloud & Tools",
+      title: "Cloud & DevOps",
       color: "primary",
-      skills: ["AWS", "Cloud Deployment", "Git", "CI/CD Basics"],
+      skills: ["AWS (Lambda, S3, CloudFront, API Gateway, SQS, Bedrock, SAM, ACM, IAM)", "Serverless Architecture", "Git", "CI/CD", "GitHub Actions"],
     },
   ];
 
