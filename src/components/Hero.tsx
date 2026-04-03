@@ -63,7 +63,7 @@ const Hero = () => {
                 </Badge>
                 <Badge variant="outline" className="gap-2 py-2 px-4 border-accent/30 hover:border-accent/50 transition-colors">
                   <MapPin className="h-4 w-4 text-accent" />
-                  <span>Atlanta, GA</span>
+                  <span>Dallas, TX</span>
                 </Badge>
               </div>
             </div>
