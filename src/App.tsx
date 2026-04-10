@@ -14,6 +14,7 @@ import ProgressiveWebChatCase from "./pages/ProgressiveWebChatCase";
 import StudentDatabaseCase from "./pages/StudentDatabaseCase";
 import AWSCloudCase from "./pages/AWSCloudCase";
 import ServerlessOrderCase from "./pages/ServerlessOrderCase";
+import ObjectDetectionCase from "./pages/ObjectDetectionCase";
 
 
 const queryClient = new QueryClient();
@@ -31,6 +32,7 @@ const App = () => {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/case/object-detection" element={<ObjectDetectionCase />} />
           <Route path="/case/aws-cloud" element={<AWSCloudCase />} />
           <Route path="/case/serverless-order" element={<ServerlessOrderCase />} />
           <Route path="/case/bank-institute" element={<BankInstituteCase />} />
