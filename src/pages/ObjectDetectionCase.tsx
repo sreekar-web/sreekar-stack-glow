@@ -3,6 +3,9 @@ import { ArrowLeft, Cloud, Eye, Database, Lock, Zap, Server, Globe, Upload, Sear
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import screenshot1 from "@/assets/object-detection-1.png";
+import screenshot2 from "@/assets/object-detection-2.png";
+import screenshot3 from "@/assets/object-detection-3.png";
 
 const ObjectDetectionCase = () => {
   const navigate = useNavigate();
@@ -138,6 +141,30 @@ const ObjectDetectionCase = () => {
               <p className="text-muted-foreground leading-relaxed">
                 Detection results — including labels, confidence scores, and metadata — are persisted in DynamoDB for fast retrieval and historical analysis. The entire architecture follows serverless best practices with IAM enforcing least-privilege access across all service interactions.
               </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Live Demo Screenshots */}
+      <section className="py-16 bg-muted/30">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl font-bold mb-4 text-center">Live Demo</h2>
+            <p className="text-muted-foreground text-center mb-8 max-w-2xl mx-auto">
+              Real-time object detection with bounding boxes, labels, confidence scores, and adjustable thresholds
+            </p>
+            <div className="grid md:grid-cols-3 gap-6">
+              {[screenshot1, screenshot2, screenshot3].map((src, index) => (
+                <Card key={index} className="overflow-hidden bg-card/50 backdrop-blur-sm border-border/50">
+                  <img
+                    src={src}
+                    alt={`Object detection demo screenshot ${index + 1}`}
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                </Card>
+              ))}
             </div>
           </div>
         </div>
