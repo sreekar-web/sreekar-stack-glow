@@ -31,6 +31,7 @@ const App = () => {
         <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/case/object-detection" element={<ObjectDetectionCase />} />
           <Route path="/case/aws-cloud" element={<AWSCloudCase />} />
           <Route path="/case/serverless-order" element={<ServerlessOrderCase />} />
           <Route path="/case/bank-institute" element={<BankInstituteCase />} />

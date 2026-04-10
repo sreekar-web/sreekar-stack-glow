@@ -13,6 +13,14 @@ const Portfolio = () => {
   
   const projects = [
     {
+      title: "AWS Object Detection System",
+      timeframe: "Apr 2026",
+      description: "Serverless image recognition pipeline using S3, CloudFront, API Gateway, Lambda, and Rekognition. Detects and labels objects in uploaded images with results stored in DynamoDB for fast retrieval.",
+      tags: ["AWS Lambda", "Rekognition", "DynamoDB", "API Gateway", "CloudFront"],
+      color: "primary",
+      link: "/case/object-detection",
+    },
+    {
       title: "Serverless Order Processing System",
       timeframe: "Mar 2026",
       description: "Event-driven backend on AWS using Lambda, API Gateway, SQS, and DynamoDB. Features queue-based async processing, Dead Letter Queues, SAM infrastructure as code, and CI/CD with GitHub Actions.",
