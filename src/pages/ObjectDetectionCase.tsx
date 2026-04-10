@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Cloud, Eye, Database, Lock, Zap, Server, Globe, Upload, Search, BarChart3 } from "lucide-react";
+import { ArrowLeft, Cloud, Eye, Database, Lock, Zap, Server, Globe, Upload, Search, BarChart3, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -124,6 +124,14 @@ const ObjectDetectionCase = () => {
               <Badge variant="secondary">CloudFront</Badge>
               <Badge variant="secondary">S3</Badge>
               <Badge variant="secondary">IAM</Badge>
+            </div>
+            <div className="mt-6">
+              <a href="https://vision.sreeworks.online/" target="_blank" rel="noopener noreferrer">
+                <Button className="gap-2">
+                  <ExternalLink className="h-4 w-4" />
+                  View Live Demo
+                </Button>
+              </a>
             </div>
           </div>
         </div>
