@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import { ArrowLeft, Brain, Layers, BarChart3, Eye, Upload, FlaskConical, Target, TrendingUp } from "lucide-react";
+import { ArrowLeft, Layers, FlaskConical, Target, TrendingUp } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
