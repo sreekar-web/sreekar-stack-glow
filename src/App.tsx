@@ -33,6 +33,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/case/object-detection" element={<ObjectDetectionCase />} />
+          <Route path="/case/fruit-classifier" element={<FruitClassifierCase />} />
           <Route path="/case/aws-cloud" element={<AWSCloudCase />} />
           <Route path="/case/serverless-order" element={<ServerlessOrderCase />} />
           <Route path="/case/bank-institute" element={<BankInstituteCase />} />

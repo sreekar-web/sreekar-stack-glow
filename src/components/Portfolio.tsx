@@ -13,6 +13,14 @@ const Portfolio = () => {
   
   const projects = [
     {
+      title: "Fruit Ripeness Classifier",
+      timeframe: "Apr 2026",
+      description: "CNN built from scratch in PyTorch to classify 39,000+ fruit images into ripe, unripe, and rotten stages. Achieves 94% validation accuracy with Grad-CAM explainability and a Streamlit demo.",
+      tags: ["PyTorch", "CNN", "Grad-CAM", "Streamlit", "Computer Vision"],
+      color: "primary",
+      link: "/case/fruit-classifier",
+    },
+    {
       title: "AWS Object Detection System",
       timeframe: "Apr 2026",
       description: "Serverless image recognition pipeline using S3, CloudFront, API Gateway, Lambda, and Rekognition. Detects and labels objects in uploaded images with results stored in DynamoDB for fast retrieval.",
