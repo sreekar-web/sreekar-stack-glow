@@ -15,7 +15,7 @@ import StudentDatabaseCase from "./pages/StudentDatabaseCase";
 import AWSCloudCase from "./pages/AWSCloudCase";
 import ServerlessOrderCase from "./pages/ServerlessOrderCase";
 import ObjectDetectionCase from "./pages/ObjectDetectionCase";
-
+import FruitClassifierCase from "./pages/FruitClassifierCase";
 
 const queryClient = new QueryClient();
 
